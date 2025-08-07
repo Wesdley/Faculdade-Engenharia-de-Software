@@ -1,0 +1,69 @@
+/* fontes utilizadas para consultas 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.teste_pseudo {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nthchild {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.box-child {
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.box-child:nth-child(1) {
+    background-color: red;
+}
+
+.box-child:nth-child(2) {
+    background-color: blue;
+}
+
+.box-child:nth-child(3) {
+    background-color: yellow;
+}
+
+/* 
+
+:first-child levando para o primeiro
+:last-child levando ao ultimo elemento
+:nth-last-child() do final para o primeiro
+
+*/
+
+.link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+    transition: 2s;
+}
+
+a:hover {
+    font-size: 100px;
+    color: red;
+    transition: 2s;
+}

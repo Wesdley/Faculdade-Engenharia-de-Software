@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.sec {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.calculadora-rustica {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.numero {
+    width: 250px;
+}
+
+input[type="text"] {
+    height: 40px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+button {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.soma {
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    font-size: 40px;
+    color: red;
+}
+
+
+

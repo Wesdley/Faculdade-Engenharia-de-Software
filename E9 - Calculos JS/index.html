@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="sec">
+        <h1>Calculando com JavaScript</h1>
+        <div class="calculadora-rustica">
+            <div class="numero">
+                <p>Numero para ser calculado</p>
+                <input id="1" type="text" pattern="[0-9]" placeholder="Numero:">
+            </div>
+            <div class="numero">
+                <p>Coloque o divisor</p>
+                <input id="operador" type="text" placeholder="+ - * ou /" pattern="[+\-*/]" maxlength="1" required>
+            </div>
+            <div class="numero">
+                <p>Numero para ser calculado</p>
+                <input id="2" type="text" pattern="[0-9]" placeholder="Numero:">
+            </div>
+        </div>
+        <div id="soma" class="soma"></div>
+        <button id="enviar" type="submit">Enviar</button>
+    </section><!--calculadora-rustica-->
+    <script src="calculo.js"></script>
+</body>
+</html>
