@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <form action="">
+        <h1>Calculadora de IMC</h1>
+        <label for="">Peso (kg)</label>
+        <input type="text" id="v1">
+        <label for="">Altura (m)</label>
+        <input type="text" id="v2">
+        <a href="#" onclick="executar()" class="btn btn-primary">Calcular</a>
+    </form>
+
+    <script src="javascript.js"></script>
+    <script>
+        const imc = (peso,altura) => peso / (altura * altura);
+        const situacao = (valor_imc) => {
+            if (valor_imc < 18.5) {
+                return("Abaixo do peso")
+            } else if (valor_imc < 30) {
+                return("Levemente acima do peso")
+            } else if (valor_imc < 35) {
+                return("Obesidade de grau I")
+            } else if (valor_imc < 40) {
+                return("Obesidade de grau II (severa)")
+            } else {
+                return("Obesidade grau III (mórbida)")
+            }
+        }
+    </script>
+</body>
+</html>
