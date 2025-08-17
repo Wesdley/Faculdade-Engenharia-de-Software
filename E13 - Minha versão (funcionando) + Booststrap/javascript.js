@@ -6,7 +6,7 @@ altura.addEventListener("input", () => {
     if (valor.length > 1) {
         altura.value = valor[0] + "." + valor.slice(1); // insere ponto após o 1º dígito
     }
-});
+}); // estudar mais sobre essa parte length e replace
 
 
 const executar = () => {
@@ -33,9 +33,7 @@ const executar = () => {
     calcular.innerHTML = `<h2>Valor do seu IMC</h2>
     <p>Seu IMC é: <b>${imc.toFixed(2)}</b></p>
     <p>Sua situação atual é: <b>${mostrar()}</b></p>`;
-}
-
-
+};
 
 /*
 pegar os valores

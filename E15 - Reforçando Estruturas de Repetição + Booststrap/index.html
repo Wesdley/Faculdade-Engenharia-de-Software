@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container text-center">
+    <h1 class="m-3">Série de Fibonacci</h1>
+    <form action="" class="form m-2">
+        <label for="" class="form-label">Valor do X</label>
+        <input type="number" id="v1" class="form-control d-inline-block w-25">
+        <a href="#" onclick="executar()" class="btn btn-primary m-2">Executar</a>
+    </form>
+    <div id="resp" class="alert alert-success">O resultado aparece aqui</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+    <script>
+        const executar = () => {
+            // coletamos o executar para começar o script
+            const x = Number(document.getElementById("v1").value); // NÃO USAR EVAL IGUAL O PROFESSOR JÁ QUE OCORRE ERRO NO CALCULO!! 
+            // definimos o valor de X
+            let serie = "", i=0; // colocamos serie como vazio para receber o valor do fibonacci 
+            // i = 0 contador em loop
+            while (i <= x) {
+                serie += fibonacci(i) + " "; i++
+                // nesse caso o valor de I vai ser entrado em loop até ser menor que o X
+                // Serie sera concatenado "+=" e o fibonacci vai calcular o valor do fibonacci na posição I
+                //" " vai ser adicionado um espaço
+                //i++ efetua o loop até o fim da verificação
+            }
+            document.getElementById("resp").innerHTML = `Resultado: ${serie}`;
+            // adiciona o elemento serie no html de acordo com a validação while
+        }
+    </script>
+</body>
+</html>
