@@ -42,6 +42,7 @@
         $var1 xor $var2; //Se uma das variáveis for verdadeira, mas não ambas
         !$var1 // negação, ou seja, se a variável for falsa
         $var1 || $var2; //Se uma das variáveis for verdadeira
+        
     ?>
 </body>
 </html>
