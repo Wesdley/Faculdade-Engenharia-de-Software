@@ -27,6 +27,7 @@ int main () {
             scanf("%d", &tamanhoNome);
             printf("Digite a quantidade de nomes: ");
             scanf("%d", &quantidadeNomes);
+            printf("\n\n");
 
             if ( tamanhoNome > 10) {
                 printf("Tamanho máximo é 10\n");
