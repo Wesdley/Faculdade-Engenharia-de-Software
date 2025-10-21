@@ -10,3 +10,14 @@ def funx ():
         print("Opção invalida")
 
 funx() # chamamos a função para funcionar
+
+number = int(input("Digite o número 1 ou 2: "))
+if number == 1:
+    def func1 (x):
+        return x + 1
+    s = func1(9)
+else:
+    def func2 (x):
+        return x + 2
+    s = func2(19)
+print(s)
