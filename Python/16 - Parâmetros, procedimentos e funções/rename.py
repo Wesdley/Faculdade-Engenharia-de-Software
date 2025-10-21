@@ -59,6 +59,6 @@ def taximetro(distancia):
     valor = (largada + distancia * km_rodado) * multiplicador
     return valor
 
-dist = eval(input("Entre com a distancia a ser percorrida em km: \n"))
+dist = float(input("Entre com a distancia a ser percorrida em km: \n"))
 pagamento = taximetro(dist)
 print(f'O valor a pagar é R$ {pagamento}')
