@@ -1,66 +1,99 @@
-class Livro:
-    def __init__(self, titulo, autor, isbn):
-        self.titulo = titulo
-        self.autor = autor
-        self.isbn = isbn
-
-class Biblioteca:
+class animal:
     def __init__(self, nome):
         self.nome = nome
-        self.livros = []
 
-    def adicionar_livro(self, livro):
-        self.livros.append(livro)
-        print(f'Livro "{livro.titulo}" adicionado à biblioteca "{self.nome}".')
+    def fala(self):
+        pass
 
-    def remover_livro(self, isbn):
-        for livro in self.livros:
-            if livro.isbn == isbn:
-                self.livros.remove(livro)
-                print(f'Livro "{livro.titulo}" removido da biblioteca "{self.nome}".')
-                return
-        print(f'Livro com ISBN {isbn} não encontrado na biblioteca "{self.nome}".')
-
-    def listar_livros(self):
-        if not self.livros:
-            print(f'A biblioteca "{self.nome}" não tem livros.')
-        else:
-            print(f'Livros na biblioteca "{self.nome}":')
-            for livro in self.livros:
-                print(f'- {livro.titulo} por {livro.autor} (ISBN: {livro.isbn})')
-
-    def procurar_livro(self):
-        titulo_livro = input("Digite o nome do livro que deseja procurar: ")
-        for livro in self.livros:
-            if livro.titulo == titulo_livro:
-                print(f'Livro "{livro.titulo}" encontrado na biblioteca "{self.nome}" por {livro.autor} (ISBN: {livro.isbn}).')
-                return
-        print(f'Livro "{titulo_livro}" não encontrado na biblioteca "{self.nome}".')
+    def movimentar(self):
+        pass
 
 
-# Testando as classes
+class Cachorro(animal):
+    def falar(self):
+        return (f"{self.nome} Au Au")
 
-# Criando alguns livros
-livro1 = Livro('O Senhor dos Anéis', 'J.R.R. Tolkien', '1234567890')
-livro2 = Livro('1984', 'George Orwell', '0987654321')
-livro3 = Livro('O Apanhador no Campo de Centeio', 'J.D. Salinger', '1122334455')
+    def movimentar(self):
+        return (f"{self.nome} está andando")
 
-# Criando uma biblioteca
-biblioteca = Biblioteca('Biblioteca Central')
 
-# Adicionando livros à biblioteca
-biblioteca.adicionar_livro(livro1)
-biblioteca.adicionar_livro(livro2)
-biblioteca.adicionar_livro(livro3)
+class Gato(animal):
+    def falar(self):
+        return (f"{self.nome} Miau")
 
-# Listando todos os livros na biblioteca
-biblioteca.listar_livros()
+    def movimentar(self):
+        return (f"{self.nome} está andando")
 
-# Removendo um livro da biblioteca
-biblioteca.remover_livro('0987654321')
 
-# Listando todos os livros na biblioteca após a remoção
-biblioteca.listar_livros()
+class Vaca(animal):
+    def falar(self):
+        return (f"{self.nome} Muu")
 
-# Procura o livro dentro da biblioteca
-biblioteca.procurar_livro()
+    def movimentar(self):
+        return (f"{self.nome} está andando")
+
+
+class voador:
+    def voar(self):
+        return (f"{self.nome} está voando")
+
+
+class nadar:
+    def nadar(self):
+        return (f"{self.nome} está nadando")
+
+
+class Pato(animal, nadar, voador):
+    def falar(self):
+        return (f"{self.nome} Quack")
+
+    def voar(self):
+        return (f"{self.nome} está voando")
+
+    def andar(self):
+        return (f"{self.nome} está andando")
+
+    def movimentar(self):
+        return (f"{self.andar()}, {self.nadar()} e {self.voar()}")
+
+
+class Jacare(animal, nadar):
+    def falar(self):
+        return (f"{self.nome} Roar")
+
+    def andar(self):
+        return (f"{self.nome} está andando")
+
+    def movimentar(self):
+        return (f"{self.andar()} e {self.nadar()}")
+
+
+# Função que usa polimorfismo para poder falar
+def fazer_som(animal):
+    return animal.falar()
+
+
+def fazer_movimento(animal):
+    return animal.movimentar()
+
+
+# instancias das classes
+gato = Gato("Bonitão")
+cachorro = Cachorro("Beethoven")
+vaca = Vaca("Miamu")
+pato = Pato("Donald")
+jacare = Jacare("Tico")
+
+# chamadas polimorficas
+
+print(fazer_movimento(gato))
+print(fazer_movimento(cachorro))
+print(fazer_movimento(vaca))
+print(fazer_movimento(pato))
+print(fazer_movimento(jacare))
+
+print(fazer_som(gato))
+print(fazer_som(cachorro))
+print(fazer_som(vaca))
+print(fazer_som(pato))
+print(fazer_som(jacare))
